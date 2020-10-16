@@ -1,0 +1,967 @@
+$main: #E59F71
+
+*, *::after, *::before
+    box-sizing: border-box
+    
+body
+    margin: 0
+    padding: 0
+    font-family: 'Open Sans Condensed', sans-serif
+    color: #ffffff
+    background-color: #111111
+
+a
+    outline: none
+
+.slider-arrow
+    position: absolute
+    right: 72px
+    cursor: pointer
+    right: 115px
+    z-index: 5
+    &.arrow-next
+        right: 72px
+
+
+.slick-slide
+    outline: none !important
+
+        
+
+.header
+    position: relative
+    &-graph
+        stroke-dasharray: 1750
+        stroke-dashoffset: 1750
+        animation: graph 20s ease-in-out infinite
+    &-burg
+        position: absolute
+        left: 215px
+        z-index: 4
+        cursor: pointer
+        top: 53px
+        span
+            width: 40px
+            display: block
+            height: 3px
+            background-color: #ffffff
+            &:nth-child(2)
+                margin: 8px 0
+
+    &-patch
+        color: #ffffff
+        z-index: 4
+        position: absolute
+        left: 215px
+        bottom: 40px
+        display: flex
+        align-items: center
+        font-size: 18px
+        &__year
+            padding-right: 220px
+            &::after
+                content: ''
+                position: absolute
+                left: 48px
+                top: 54%
+                width: 180px
+                height: 1px
+                background-color: #ffffff
+    &-aside
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 7
+        border-right: 2px solid #fff
+        height: 100%
+        text-align: center
+    &-logo
+        margin-bottom: 110px
+    &__location
+        font-size: 14px
+        margin-top: 28px
+        line-height: 1.2
+        letter-spacing: 0.4px
+        display: inline-block
+        position: relative
+        padding-left: 14px
+        &::before
+            content: ''
+            position: absolute
+            left: -4px
+            top: 50%
+            transform: translateY(-50%)
+            background: url('../img/geo.svg')
+            width: 14px
+            height: 14px
+    &-menu
+        padding: 0
+        margin: 0
+        list-style-type: none
+        margin-bottom: 93px
+        &__item
+            margin-top: 35px
+            a
+                color: #ffffff
+                text-decoration: none
+                font-size: 14px 
+                transition: 0.25s ease-in-out
+                &:hover
+                    color: $main
+                span
+                    display: inline-block
+                img
+                    display: block
+                    margin-left: auto
+                    margin-right: auto
+                    margin-bottom: 5px
+    &-map
+        position: absolute
+        z-index: 3
+        right: 0
+        top: 0
+    &__date
+        font-size: 72px
+        font-weight: 700
+        line-height: 1.1
+        span
+            font-weight: 300
+            font-size: 20px
+            display: block
+    &-dots
+        position: absolute
+        bottom: 40px
+        right: 50px
+        text-align: right
+        max-width: 665px
+        width: 100%
+        &__wrapper-num
+            font-weight: 800
+        .slick-track
+            transform: translate3d(0px, 0px, 0px) !important
+        .slick-current .header-dots__flex
+            border-top-color: $main
+        &__flex
+            display: flex
+            justify-content: space-between
+            width: 140px
+            border-top: 3px solid #ffffff
+            padding-top: 3px
+            cursor: pointer
+    .slick-slide img
+        display: inline-block
+        margin-top: 27px
+    .header-arrow 
+        top: 62px
+    &-slider
+        &__release, &__avaliable
+            font-size: 24px
+            line-height: 33px
+            position: relative
+            display: inline-block
+            &::before
+                content: ''
+                position: absolute
+                width: 95px
+                height: 1px
+                left: -115px
+                background-color: $main
+                top: 54%
+        &__title
+            font-size: 84px
+            line-height: 114px
+            margin: 0
+            margin-bottom: 35px
+        &__count
+            font-size: 32px
+            line-height: 44px
+            font-weight: 700
+            margin-top: 17px
+                
+
+
+
+        &__item
+            position: relative
+            height: 100vh
+            z-index: 2
+            &::after
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: radial-gradient(50% 50% at 50% 50%, rgba(34, 34, 34, 0) 0%, #111111 100%)
+                z-index: -1
+                bord
+            &--1
+                background: url('../img/header-zed__gs.jpg') center/cover no-repeat
+            &--2
+                background: url('../img/header-zed__ds.jpg') top/cover no-repeat
+            &--3
+                background: url('../img/header-zed__cs.jpg') center top no-repeat
+                background-size: cover
+            &--4
+                background: url('../img/header-zed__sb.jpg') center top no-repeat
+                background-size: cover
+ 
+        &__content 
+            position: absolute
+            right: 72px
+            bottom: 120px
+            text-align: right
+
+main
+    padding-top: 160px
+
+.btn
+    text-transform: uppercase
+    text-decoration: none
+    color: #ffffff
+    font-weight: 800
+    font-size: 40px
+    text-align: center
+    span
+        background-color: $main
+        padding-left: 12px
+        padding-right: 12px  
+        padding-bottom: 2px
+        padding-top: 2px
+        margin-left: 9px
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            width: 20px
+            height: 1px
+            background-color: #ffffff
+            left: -12px
+            top: 52%
+
+.container
+    max-width: 1920px
+    margin: 0 auto
+
+.sect-arrow
+    opacity: 0.25
+    transition: 0.25s ease-in-out
+    &:hover
+        opacity: 1
+
+.server
+    .slick-list
+        height: 100%
+    &__map
+        @media(min-width: 1001px)
+            .slick-track
+                transform: translate3d(0px, 0px, 0px) !important
+        height: 782px
+        max-width: 1480px
+        margin-left: auto
+        margin-right: auto
+        width: 100%
+        background: url('../img/world__map.png') center/cover no-repeat
+        margin-top: -100px
+        position: relative
+        .slick-current
+            .server__map-circle
+                box-shadow: 0 0 20px $main
+            .server__map-info
+                opacity: 1
+                visibility: visible
+        &-wrapper
+            position: absolute
+            width: 220px
+            &--1
+                top: 170px
+                left: 89px
+            &--2
+                top: calc(295px - 178px)
+                left: calc(408px - 96px)
+            &--3
+                top: calc(571px - 178px)
+                left: calc(511px - 96px)
+            &--4
+                top: calc(271px - 178px)
+                left: calc(705px - 96px)
+            &--5
+                top: calc(244px - 178px)
+                left: calc(902px - 96px)
+            &--6
+                top: calc(346px - 178px)
+                right: calc(372px - 96px)
+            &--7
+                top: calc(624px - 178px)
+                right: calc(176px - 96px)
+        &-circle
+            width: 28px
+            height: 28px
+            border-radius: 50%
+            background-color: $main
+            margin-top: 12px
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            cursor: pointer
+            position: relative
+        &-info
+            background-color: rgba(#000, 0.8)
+            border-radius: 10px
+            padding: 25px
+            opacity: 0
+            visibility: hidden
+            transition: 0.25s ease-in-out
+        &-stat
+            margin: 0
+            padding: 0
+            list-style-type: none
+            margin-top: 12px
+            &__item
+                position: relative
+                padding-left: 23px
+                font-size: 12px
+                letter-spacing: 0.1px
+                &:first-child
+                    margin-bottom: 8px
+                &::after
+                   content: ''
+                   position: absolute
+                   left: 0
+                   top: 52%
+                   transform: translateY(-50%)
+                   background: url('../img/serv-ico-1.svg') center/cover no-repeat
+                   width: 12px
+                   height: 16px
+                &--2::after
+                    background: url('../img/serv-ico-2.svg') center/cover no-repeat
+                    width: 13px
+                    height: 15px
+                
+        &-row
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &-city
+            margin-top: 15px
+        &-country
+            font-size: 18px
+            line-height: 25px
+            margin: 0
+            letter-spacing: 0.25px
+            position: relative
+            &::after
+               content: ''
+               position: absolute
+               bottom: -7px
+               left: 0
+               background-color: $main
+               width: 95px
+               height: 1px 
+        &-arrow
+            img
+                max-width: 16px
+                height: 13px
+    .slick-arrow
+        top: -50px
+    .slick-current
+        .server-slider
+            &__citata, &__num, &__btn, &__name
+                opacity: 1
+                visibility: visible
+            &__overlay
+                background-color: rgba(#000, 0.5)
+    &-slider
+        margin-top: 120px
+        &__citata, &__num, &__btn, &__name
+            transition: 0.5s ease-in-out
+        &__citata
+            letter-spacing: 5px
+            font-size: 20px
+            transform: rotate(-90deg)
+            width: 0
+            left: 0
+            white-space: nowrap
+            position: absolute
+            left: 35px
+            bottom: 245px
+            opacity: 0
+            visibility: hidden
+            &::before
+                position: absolute
+                content: ''
+                width: 100px
+                height: 1px
+                background-color: #ffffff
+                top: 50%
+                left: -120px
+
+        &__btn
+            position: absolute
+            bottom: 2px
+            width: 100%
+            opacity: 0
+            visibility: hidden
+        &__num
+            position: absolute
+            font-size: 20px
+            letter-spacing: 0.4px
+            top: 20px
+            right: 20px
+            opacity: 0
+            visibility: hidden
+        &__overlay
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(#000, 0.9)
+            z-index: -1
+        &__name
+            font-weight: 800
+            font-size: 36px
+            text-align: center
+            letter-spacing: 0.2px
+            position: absolute
+            bottom: 90px
+            width: 100%
+            text-align: center
+            opacity: 0
+            visibility: hidden
+        
+        &__wrapper
+            min-height: 700px
+            background: url('../img/zedx-1.jpg') center/cover no-repeat
+            position: relative
+            z-index: 2
+            &--1, &--6
+                background: url('../img/zedx-1.jpg') center/cover no-repeat
+            &--2, &--7
+                background: url('../img/zedx-2.jpg') center no-repeat
+                background-size: auto 745px
+            &--3
+                background: url('../img/zedx-3.jpg') center no-repeat
+                background-size: auto 745px
+            &--4
+                background: url('../img/zedx-4.jpg') center/cover no-repeat
+            &--5
+                background: url('../img/zedx-5.jpg') center no-repeat
+                background-size: auto 745px
+            &--little
+                min-height: 660px
+                transform: translateY(40px)
+        
+
+.sect
+    // padding-bottom: 200px
+
+    &__title
+        font-size: 90px
+        margin: 0
+        line-height: 123px
+        padding-left: 220px
+        position: relative
+        display: inline-block
+        &::after
+            content: ''
+            position: absolute
+            width: 95px
+            height: 1px
+            background-color: $main
+            right: -9px
+            top: 10px
+    &-info
+        text-align: right
+        margin-top: 25px
+        padding-right: 72px
+        &__number
+            text-align: right
+            font-size: 24px
+            margin-top: 15px
+            font-weight: 800
+        &__location
+            font-size: 28px
+            line-height: 38px
+            letter-spacing: 0.095em
+            position: relative
+            padding-left: 116px
+            display: inline-block
+            &::before
+                content: ''
+                position: absolute
+                top: 52%
+                left: 0
+                height: 1px
+                width: 95px
+                background-color: $main
+        &__server
+            font-size: 42px
+            line-height: 57px
+            font-weight: bold
+            margin-top: 8px
+    
+.looks
+    padding-top: 240px
+    padding-bottom: 185px
+    &-slider
+        .sect-arrow
+            top: 200px
+    &__title
+        font-size: 90px
+        line-height: 123px
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            width: 95px
+            height: 1px
+            background: $main
+            left: 100px
+            top: 10px
+    &-wrapper
+        margin-top: -100px
+        position: relative
+        &__img
+            background: url('../img/all_same-1.png') no-repeat
+            height: 750px
+            width: 1275px
+            &--2
+                background: url('../img/as.jpg') no-repeat
+    &-citata
+        position: absolute
+        bottom: 70px
+        right: 160px
+        &__name
+            font-weight: bold
+            font-size: 32px
+            line-height: 44px
+            display: inline-block
+            margin-bottom: -5px
+            position: relative
+            padding-left: 116px
+            &::after
+               content: ''
+               position: absolute
+               left: 0
+               top: 54%
+               width: 95px
+               height: 1px
+               background-color: $main
+        &__stars
+            display: flex
+            justify-content: flex-end
+            img
+                margin-right: -12px
+                &:last-child
+                    margin-right: -18px
+    &-bottom
+        margin-top: 70px
+        padding: 0 218px
+        display: flex
+        justify-content: space-between
+        &__cell
+            position: relative
+        &__title
+            font-size: 48px
+            line-height: 90%
+            font-weight: 800
+            padding-left: 53px
+            min-height: 252px
+
+        &__rotate
+            font-size: 24px
+            letter-spacing: 0.18em
+            transform: rotate(-90deg)
+            position: absolute
+            width: 236px
+            white-space: nowrap
+            text-align: right
+            left: -102px
+            top: 102px
+            opacity: 0.5
+
+
+.footer
+    text-align: center
+    padding-bottom: 25px
+    &__btn
+        font-size: 48px
+        span::before
+            left: -15px
+    &__copy
+        display: block
+        margin-top: 20px
+        font-size: 20px
+        line-height: 100%
+        opacity: 0.5
+
+
+        
+@keyframes graph
+    100%
+        stroke-dashoffset: 0
+        stroke-dasharray: 0
+
+@media(max-height: 992px), (max-width: 1452px)
+    .header-menu
+        margin-bottom: 40px
+    .header-logo
+        margin-bottom: 65px
+    .server__map
+        max-width: 990px
+        height: 521px
+    .server__map-circle
+        position: relative
+        z-index: 4
+    .server__map-wrapper--1
+        top: 40px
+        left: 20px
+    .server__map-wrapper--2
+        top: -35px
+        left: 190px
+    .server__map-wrapper--3
+        top: 180px
+        left: 240px
+    .server__map-wrapper--4
+        top: -25px
+        left: 375px
+    .server__map-wrapper--5
+        top: -28px
+        left: 490px
+    .server__map-wrapper--6
+        top: 55px
+        right: 140px
+    .server__map-wrapper--7
+        top: 235px
+        right: 5px
+    .server__map .slick-list
+        overflow: visible
+
+@media(max-width: 1850px)
+    .looks-wrapper__img
+        background-size: cover
+        width: 800px
+        height: 455px
+    .looks-citata
+        right: 72px
+        &__name
+            font-size: 26px
+    .looks-bottom
+        padding: 0 180px
+    .looks-bottom__title
+        font-size: 42px
+        padding-left: 46px
+    .looks-bottom__rotate
+        font-size: 22px
+
+@media(max-width: 1452px)
+
+    .looks-bottom
+        padding: 0 120px
+
+    .sect__title
+        padding-left: 120px
+        font-size: 84px
+    .server__map
+        margin-top: -25px
+
+    .header__location
+        margin-top: 34px
+    .header-patch__year
+        padding-right: 53px
+
+    .header-slider__title
+        font-size: 76px
+        line-height: 90px
+        margin-bottom: 25px
+    .header-slider__count
+        margin-top: 14px
+    .header-patch__year
+        padding-right: 50px
+    .header-patch__year::after
+        width: 25px
+        left: 40px
+    .header-patch
+        font-size: 16px 
+
+@media(max-width: 1370px)
+    .looks-bottom__title
+        padding-left: 40px
+    .header__location  
+        margin-top: 57px
+    .header__date
+        line-height: 1
+    .header-patch
+        bottom: 25px
+    .header-dots
+        bottom: 25px
+    .header-slider__content
+        bottom: 100px
+    .btn
+        font-size: 32px
+    .server-slider__name
+        bottom: 65px
+
+
+
+@media (max-width: 1249px)
+    .header-patch
+        display: none
+
+    .looks-bottom
+        padding: 0 70px
+    .looks-bottom__rotate
+        font-size: 18px
+
+
+    .looks-bottom__title
+        padding-left: 38px
+        font-size: 36px
+
+    main
+        padding-top: 120px
+    .looks
+        padding-top: 140px
+    .looks-wrapper__img
+        width: 545px
+        height: 320px
+    .looks-citata__name
+        font-size: 24px
+    .looks-citata
+        bottom: 32px
+
+@media(max-width: 1000px)
+
+
+    .looks-bottom
+        flex-wrap: wrap
+        padding: 0 80px
+        margin-top: 50px
+        &__cell
+            flex-basis: 32%
+    
+    .looks-bottom__title
+        min-height: 220px
+
+    .looks-wrapper
+        margin-top: 0
+    .looks-citata
+        position: static
+        display: inline-block
+        padding-left: 30px
+        &__name
+            padding-left: 0
+            &::after
+                display: none
+    .server__map
+        background: none
+        margin-top: 50px
+        height: 171px
+    .server__map-item
+        margin: 0 25px
+    .server__map-info
+        visibility: visible
+        opacity: 1
+    .server__map-wrapper
+        width: 100%
+    main
+        padding-top: 90px
+    .sect__title
+        font-size: 68px
+    .sect-info__location
+        font-size: 24px
+    .sect-info__server
+        font-size: 36px
+        line-height: 1
+    .sect-info
+        margin-top: 15px
+    .server__map-wrapper
+        position: static
+    .server__map-circle
+        display: none
+    .server__map .slick-list
+        overflow: hidden !important
+
+@media (max-width: 930px)
+    .sect__title
+        font-size: 60px
+        padding-left: 70px
+    .sect-info
+        padding-right: 35px
+        margin-top: 5px
+    .header-slider__content
+        right: 35px
+    .header-dots__flex
+        width: 115px
+    .header-dots
+        max-width: 620px
+        right: 0px
+    .slider-arrow.arrow-next
+        right: 35px
+    .slider-arrow.arrow-prev
+        right: 76px
+
+
+@media (max-width: 850px)
+    .looks
+        padding-top: 90px
+    .server-slider__wrapper--little
+        transform: translateY(0)
+    .header-aside
+        border: none
+    .header-logo
+        img
+            max-width: 120px
+    .header-graph
+        max-width: 340px
+    .header-menu
+        display: none
+    .header__location
+        // padding-left: 0
+        margin-top: 105px
+        &::before
+            // display: none
+    .server-slider__citata
+        letter-spacing: 3px
+        bottom: 230px
+
+    .server-slider__wrapper
+        min-height: 600px
+    .btn
+        font-size: 26px
+    .server-slider__name
+        font-size: 32px
+        bottom: 55px
+
+    .header__date
+        position: absolute
+        left: 30px
+        top: 245px
+    .header-burg
+        top: 45px
+        left: 165px
+    .header .header-arrow
+        top: 49px
+    .header-slider__title
+        font-size: 64px
+    .header-slider__release, .header-slider__avaliable
+        font-size: 22px
+
+
+@media (max-width: 655px)
+    main
+        padding-top: 60px
+    .looks
+        padding-top: 65px
+        &-bottom
+            padding: 0 20px
+            &__cell
+                flex-basis: 48%
+        .slider-arrow
+            left: 15px
+            top: 100px
+            &.arrow-next
+                left: 55px
+    .sect-info__server
+        font-size: 32px
+    .looks-wrapper__img
+        width: 325px
+        height: 170px
+    .sect__title
+        padding-left: 30px
+        font-size: 56px
+    .sect-info
+        padding-right: 15px
+    .sect-info__location
+        padding-left: 86px
+        font-size: 20px
+    .sect-info__location::before
+        width: 65px
+    .header-graph
+        max-width: 220px
+    .header-dots
+        display: none
+    .header-burg
+        top: 27px
+        left: 115px
+    .header .header-arrow
+        top: 33px
+    .header__location
+        display: none
+    .header__date
+        font-size: 48px
+        left: 25px
+        top: 170px
+    .header-slider__release::before, .header-slider__avaliable::before
+        width: 65px
+        left: -85px
+    .header-slider__content
+        bottom: 20px
+        right: 15px
+    .header-slider__title
+        font-size: 54px
+        margin-bottom: 20px
+        line-height: 80px
+    .header-slider__count
+        line-height: 35px
+        margin-top: 12px
+    .slider-arrow.arrow-prev
+        right: 55px
+    .slider-arrow.arrow-next
+        right: 15px
+    .header-logo
+        img
+            max-width: 92px
+
+@media (max-width: 419px)
+    .looks
+        padding-bottom: 0
+    .looks-bottom__cell
+        flex-basis: 100%
+    .looks-bottom
+        text-align: center
+    .looks-bottom__rotate
+        left: -90px
+    .looks-bottom__title
+        padding-left: 0px
+        font-size: 40px
+        min-height: 220px
+    .server-slider__wrapper
+        min-height: 490px
+    .server-slider__citata
+        bottom: 170px
+        letter-spacing: 2px
+
+@media(max-width: 350px)
+    .header-slider__title
+        font-size: 46px
+        line-height: 56px
+        margin-bottom: 10px
+    .header .slick-slide img
+        margin-top: 18px
+    .header__date
+        top: 165px
+    .header-burg span
+        width: 35px
+        height: 2px
+    .header-burg span:nth-child(2)
+        margin: 7px 0
+    .header .header-arrow
+        top: 27px
+    .header-slider__count
+        font-size: 28px
+
+
+
+@media(max-height: 880px)
+    .header-graph
+        max-width: 280px
+    .header-map
+        top: -90px
+    .header-menu li:first-child, .header-menu li:last-child
+        display: none    
+
+@media(max-height: 665px)
+    .header-menu li:nth-child(2)
+        display: none
